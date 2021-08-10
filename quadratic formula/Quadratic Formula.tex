@@ -1,0 +1,82 @@
+\documentclass[11pt]{article}
+\usepackage[margin = 1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{url}
+\usepackage[parfill]{parskip}
+\usepackage{listings}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{mdframed}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},  
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,        
+	breaklines=true,                
+	captionpos=b,                    
+	keepspaces=true,                
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+\lstset{style=mystyle}
+\newcommand{\skipline}{\vspace{\baselineskip}}
+\newcommand{\spacer}{\noalign{\medskip}}
+\newcommand{~}{\sim}
+\newcommand{\approches}{\rightarrow}
+\newcommand{\qarrow}{\quad \rightarrow \quad}
+\newcommand{\qqarrow}{\qquad \rightarrow \qquad}
+\newcommand{\qtext}[1]{\quad \text{ #1 } \quad}
+\newcommand{\qqtext}[1]{\qquad \text{ #1 } \qquad}
+\newcommand{\pard}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\answer}[1]{\textbf{\boldmath #1}}
+\newenvironment{problem}[1]{\textbf{Excersise #1: }}{\newpage}
+
+\begin{document}
+	
+	\begin{center}
+		\textbf{Quadratic Formula} \\
+		\textbf{Kadence Ly} \\
+		\skipline \skipline
+	\end{center}
+
+
+	\begin{proof}
+		Notice the following derivation of the quardratic forumla for any given quadratic equation. 
+		\\ \\
+		Notice the standard form of a qaudratic equations:
+		\[ax^2 + bx + c = 0\]
+		We now divide the entire equation by its leading coefficient,$a$:
+		\[x^2 + \frac{b}{a} + \frac{c}{a} = 0\]
+		Now we add zero by adding and subtracting $\frac{b}{2a}$:
+		\[x^2 + 2 \left( \frac{b}{2a} \right)x + \left(\frac{b}{2a}\right)^2 + \frac{c}{a} - \left(\frac{b}{2a}\right)^2 = 0 \]
+		Now we can convert the first three terms into a square of a binomial and also combine the last two terms:
+		\[ \left(x + \frac{b}{2a}\right)^2 + \frac{4ac - b^2}{4a^2} = 0\]
+		Now we work to isolate the variable, $x$, through simple algebra:
+		\begin{align*}
+			\left(x + \frac{b}{2a}\right)^2 &= \frac{b^2 - 4ac}{4a^2} \\ \\
+			\sqrt{\left(x + \frac{b}{2a}\right)^2} &= \pm \sqrt{\frac{b^2 - 4ac}{4a^2}} \\ \\
+			x + \frac{b}{2a} &= \frac{\pm \sqrt{b^2 - 4ac}}{2a} 
+		\end{align*}
+		\textbf{Thus, we get the quadratic equation:}
+		\[ \boldsymbol{x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}}\]
+	\end{proof}
+	
+\end{document}
+

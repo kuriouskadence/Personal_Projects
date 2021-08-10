@@ -1,0 +1,94 @@
+h1 {
+	color: purple;
+}
+/* color change when you hover over the link*/
+a:hover {
+	color: blue;
+}
+/* color change in state of activeness*/
+a:active {
+	color: red;
+}
+/* color change when visited cite*/
+a:visited {
+	color: #8559b8;
+}
+/* changes the background of the cite*/
+body {
+	background: #c2b968e7;
+}
+
+div#wrapper {
+	/* auto matically resize based off of screen real estate */
+	margin: auto;
+	background: white;
+	width: 800px;
+	height: 2000px;
+}
+
+header {
+	/* display block just means it'll be followed by a line break after it finishes*/
+	display: block;
+	/* top right bottom left side */
+	padding: 0px 0px 70px 0px;
+}
+
+#webstiteLogo {
+	float: left;
+}
+
+#horzNav {
+	display: block;
+	padding: 10px 20px 10px 0px;
+	background: black;
+}
+
+/* reference each link within our horizontal navigation*/
+
+#horzNav a {
+	/* get rid of the underlines*/
+	text-decoration: none;
+	padding: 0px 0px 0px 20px;
+	color: white;
+}
+
+main {
+	padding: 10px 20px 20px 20px;
+}
+
+aside {
+	background: #efdecd;
+}
+
+#uoListTypes {
+	list-style-type: circle;
+	/* u can also make them different shapes as well as images - 
+	list-style-image: url(favicon.ico);*/
+}
+
+/* Odered list types have many options,
+decimal, decimal-leading-zero, lower-roman, upper-roman, lower-latin, upper-latin, lower-alpha, upper-alpha, lower-greek, armenian, georgian */
+
+#oListTypes {
+	list-style-type: upper-roman;
+}
+
+#oListIndent {
+	list-style-type: lower-roman;
+}
+
+#tableData {
+	width: 600px;
+	border: 3px solid black;
+}
+
+#tableData td,
+th {
+	border: 1px solid black;
+}
+
+footer {
+	background: black;
+	color: white;
+	padding: 10px 10px 10px 10px;
+}

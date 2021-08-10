@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<!--comment-->
+
+<!-- <http://newthinktankcom/html5.html.htm> -->
+
+<html lang="eng">
+	<head>
+		<!-- characters -->
+		<meta charset="UTF-8" />
+
+		<!--redirect to another page-->
+		<!-- <meta http-equiv="refresh" content="3; url=redirect.html"> -->
+		<!-- example! 
+            <html lang= "eng">
+            <head>
+            <meta charset= "UTF-8"> 
+            <title> HTML5 Tutorial</title>
+            </head>
+
+            <body> 
+                <h3> Redirected Here </h3>
+                
+            </body>
+            
+            </html> 
+        -->
+		<!-- desription should only use 200 maximum characters-->
+		<meta
+			name="description"
+			content="Learn everything you want to know about HTML5
+        in this video tutorial. Tags, content sections, embedding media, forms, canvas,
+        and more will be covered."
+		/>
+
+		<!-- keywords should only use 1000 maximum characters-->
+		<meta
+			name="keywords"
+			content="html5 canvas, html tutorial, html5 doctype,
+        html5 tags, html5 video, learn html5 "
+		/>
+
+		<!-- search engines indexing your content; index indicates whether or not your search engine 
+        should index your page, if you put 'index' itll read the data, if you type 'noindex' it wont 
+        follow tells your robots that all of you hyperlinks should also be followed and indexed, if not- 'nofollow'; 
+        'archive' or 'noarchive' tells whether the page should be archived or not-->
+		<meta name="robots" content="index,follow" />
+
+		<!-- <script src="randomcolorchange.js"></script> -->
+
+		<!-- define all the default locations on your page - make sure to define this information
+        before giving any other link tags-->
+		<!-- <base href="http://localhost/html/" /> -->
+
+		<!-- define style sheet; stytlesheet provides the style while html provides the structure for all of your data-->
+		<link rel="stylesheet" href="styles.css" />
+
+		<!-- icon link! -->
+		<link rel="icon" href="../../Downloads/favicon.ico" />
+
+		<title>HTML5 Tutorial</title>
+        <script src="excanvas.js"></script>
+        <!-- <script src="webstore.js"></script> -->
+	</head>
+
+	<!-- <body onload="alert('Hello!')"> -->
+	<body>
+		<!-- click color change (randomcolorchange.js)-->
+		<!-- normally used to define the size and position of the webpage overall; should only be used for styling-->
+		<div id="wrapper">
+			<!-- send a message to the user who doesnt have javascript on-->
+			<noscript>Please enable JavaScript </noscript>
+
+			<!-- most important thing on the page with h tags-->
+			<h1>Change with a click</h1> 
+
+            <!-- jump to the top of the page like this-->
+            <a name="pageTop">Top of Page</a>
+            <!-- jump to the bottom of the page -->
+            <a href="html5.html#pageBottom">Bottom of Page</a>
+
+			<!-- structure your data with paragraph tags-->
+			<!-- paragraph tags add two line breaks after the closing paragraph tag
+        while a break(br) tag is gna add one line break directly after it-->
+			<p>
+				In any case, at that point word comes that Helen of Sparta has
+				been seized.<br />
+				Conflicted between affection and dread for his companion,
+				Patroclus ventures with Achilles to Troy, minimal realizing that
+				the years that follow will test all that they hold dear.
+				<br />Significantly moving and amazingly unique, this delivering
+				of the epic Trojan War is a stunning accomplishment of the
+				creative mind, a staggering romantic tale, and an omnipotent
+				fight among divine beings and lords, harmony and wonder, eternal
+				acclaim and the human heart.
+			</p>
+
+			<!-- if you want a line to be created between paragraphs-->
+			<hr />
+
+			<!-- whenever you want to indent - you can also cite where the information came from-->
+			<blockquote cite="http://www.epicquotes.com">
+				" A woman can love you till death and still not talk to you
+				understand that "
+			</blockquote>
+
+			<!-- if you want to put quotes around something; you can cite this aswell-->
+			<q> wanna go to sawcon?... SAWCON DEEZ NUTZ </q>
+
+			<!-- if you wanna paste something and keep the white space-->
+			<pre>
+        ───▄▀▀▀▄▄▄▄▄▄▄▀▀▀▄───
+        ───█▒▒░░░░░░░░░▒▒█───
+        ────█░░█░░░░░█░░█────
+        ─▄▄──█░░░▀█▀░░░█──▄▄─
+        █░░█─▀▄░░░░░░░▄▀─█░░█
+        █▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█
+        █░░╦─╦╔╗╦─╔╗╔╗╔╦╗╔╗░░█
+        █░░║║║╠─║─║─║║║║║╠─░░█
+        █░░╚╩╝╚╝╚╝╚╝╚╝╩─╩╚╝░░█
+        █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█
+        </pre
+			>
+			<!-- you can also print some code inside of pre tags without it being weird-->
+			<pre>
+        <code>
+            def fizzbuzz(num1,num2,num3,num4):
+            for fizzbuzz in range (0,4):
+                if(fizzbuzz % num1 == 0) and (fizzbuzz % num2 == 0):
+                    print('fizzbuzz')
+                elif fizzbuzz % num1 == 0:
+                    print('fizz')
+                elif fizzbuzz % num2 == 0:
+                    print('buzz')
+        </code>
+        </pre>
+
+			<!-- if you want to add an image to your page-->
+			<img
+				id="danceImg"
+				src="https://i.pinimg.com/564x/ea/d9/5d/ead95de76f6546a19d8fb0d4140bb59d.jpg"
+				width="237"
+				height="178"
+				alt="mark lee"
+			/><br />
+
+			<!-- different ways to emphasize text-->
+			<b>Bold: Bold Font</b><br />
+			<strong>Strong</strong><br />
+			<em>Emphasis</em><br />
+			<i>Italic</i><br />
+
+			<!-- four ways to format text-->
+			<small>Small</small><br />
+			<ins>Insert</ins><br />
+			<del>Delete</del><br />
+			<samp>Sample Programming Output</samp><br />
+
+			<!-- advisor tags-->
+			This is an abbreviation <abbr title="abbreviation">abbrv.</abbr><br>
+        <dfn>Definition: </dfn>the formal statement of the meaning or significance of a word<br>
+        <dfn title="the formal statement of meaning or significance of a word>
+        Definition</dfn><br> 
+			<kbd>Enter Something Here</kbd>
+
+			<!-- character entities -- http://dev.w3.org/html5/html-author/charref -->
+			&cent; &pound; &yen; &copy; &reg; &deg; &frac14; &frac12; &frac34;
+			&sup2;<br />
+
+			<!-- super script and sub script-->
+			4<sup>2</sup><br />
+			CO<sub>2</sub><br />
+
+			<!-- define direction for your characters -->
+			<bdo dir="rtl">ecnedak se yos</bdo>
+
+			<!-- ruby annotation for pronuciation -->
+			<ruby>안녕<rt>annyeong</rt></ruby
+			><br />
+
+			<!-- hyperlinks ; each hyperlink has 3 interactive states (styles.css)-->
+			<a href="http://Youtube.com" title="Youtube">Youtube</a>
+
+            <p>
+                .- -.-. -.-. --- .-. -.. .. -. --. / - --- / .- .-.. .-.. / -.- -. --- .-- -. / .-.. .- .-- ... / --- ..-. / .- ...- .. .- - .. --- -. --..-- / - .... . .-. . / .. ... / -. --- / .-- .- -.-- / .- / -... . . / ... .... --- ..- .-.. -.. / -... . / .- -... .-.. . / - --- / ..-. .-.. -.-- .-.-.- / .. - ... / .-- .. -. --. ... / .- .-. . / - --- --- / ... -- .- .-.. .-.. / - --- / --. . - / .. - ... / ..-. .- - / .-.. .. - - .-.. . / -... --- -.. -.-- / --- ..-. ..-. / - .... . / --. .-. --- ..- -. -.. .-.-.- / - .... . / -... . . --..-- / --- ..-. / -.-. --- ..- .-. ... . --..-- / ..-. .-.. .. . ... / .- -. -.-- .-- .- -.-- / -... . -.-. .- ..- ... . / -... . . ... / -.. --- -. .----. - / -.-. .- .-. . / .-- .... .- - / .... ..- -- .- -. ... / - .... .. -. -.- / .. ... / .. -- .--. --- ... ... .. -... .-.. . .-.-.- / -.-- . .-.. .-.. --- .-- --..-- / -... .-.. .- -.-. -.- .-.-.- / -.-- . .-.. .-.. --- .-- --..-- / -... .-.. .- -.-. -.- .-.-.- / -.-- . .-.. .-.. --- .-- --..-- / -... .-.. .- -.-. -.- .-.-.- / -.-- . .-.. .-.. --- .-- --..-- / -... .-.. .- -.-. -.- .-.-.- / --- --- .... --..-- / -... .-.. .- -.-. -.- / .- -. -.. / -.-- . .-.. .-.. --- .-- /− · − · − − / .-.. . - .----. ... / ... .... .- -.- . / .. - / ..- .--. / .- / 
+
+            </p>
+            <!-- up top we used name to define the location,(method frowned upon by some) while down here 
+                we used id which is more of the preffered way -->
+            <a href="html5.html#pageTop">Top of Page</a>
+
+            <!-- put a link to the bottom by using id--> 
+            <a id="pageBottom">Bottom of Page</a>
+
+            <!-- whenever this link is clicked on, itll open the defined mail application on the desktop and you'll be able to send an email  -->
+            <a href="mailto:kurooloo@gmail.com">Send an Email</a>
+
+            <!-- you can also dynamically call for a java script function to exacute (randomcolorchange) toggle function-->
+            <!-- when you click on the link toggle image, the image with disappear but if you click it again, it'll reappear -->
+            <a href="javascript:toggleImg()">Toggle Image</a><br>
+            
+            <iframe src="https://open.spotify.com/embed/playlist/1q6UTIEaE7i3C9wCrauOXY" width="100%" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+            <!-- define hotspot links in images
+            <img src= "http://localhost/html5/imagemap.png" alt="imagemap example"
+            width="600" height="125" usemap="#map" />  26:00 gimp image map use figure out later -->
+
+            <!-- embed numerous external files using the object tag-->
+            <!--pdf-->
+            <object data="SmallBusinessPresentation.pdf" type="application/pdf"
+            width="750" height="400">
+        </object>
+        <!-- html files-->
+        <object data="html5.html" type="text/html" width="750" height="400">
+        </object>
+        <!-- wav file-->
+        <!-- <object
+        data="https://www.wavsource.com/snds_2020-10-01_3728627494378403/animals/bird.wav" 
+        type="audio/x-wav"> -->
+    
+        <!-- u can make it auto play or have a controller for it -->
+
+        <param name="autoplay" value="true">
+        <param name="controller" value="true">
+
+    </object>
+    <!-- u can also embed external resources in iframe-->
+    <iframe width="1424" height="652" src="https://www.youtube.com/embed/Uf--6_a9B4w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+    <!-- embed interactive files with embed-->
+    <!-- reference the plugin-->
+    <embed src='http://www.itma.vt.edu/tech/flash.swf'
+    
+    pluginspage="http://www.macromedia.com/shockwave/download"
+    type="application/x-shockwave-flash" width="300" height="120" loop="false"
+    qaulity="high">
+
+    <!-- u can also embed mp3 files using audio-->
+    <audio controls autoplay loop preload>
+        <source src="comingtotake.wav" type='audio/wav'>
+        Browser doesnt support the audio tag
+    </audio>
+<!-- u can embed mp4 files using the video tag-->
+<video controls autoplay preload>
+    <source src="http://techslides.com/demos/sample-videos/small.mp4" 
+    type="video/mp4" >
+</video>
+
+<!-- with html5 we can structure our data-->
+
+<!-- <header>
+    <a href="http://localhost/html5/html52.html">
+    <img id="websiteLogo" alt="New Think Tank Logo"
+    src="http://localhost/html5/NTTLogo.gif"/>
+    </a>
+    <h1>New Think Tank</h1>
+</header> -->
+
+<!-- we can find a navagation section of a page with nav-->
+<nav id="horzNav" >
+    <p>
+        <a href="google.com">Google</a>
+        <a href="youtube.com">Youtube</a>
+
+    </p>
+     
+</nav>
+
+<!-- different tags we can use to structure our document-->
+<main id="content">
+    <section>
+        <h2>Fun Fact</h2>
+        <!-- article is its own self containted document that'll be complete on its own-->
+        <article>
+            <!-- these articles will have headings as well as content-->
+            <h3>mark's debut</h3>
+            <p>
+                Mark debuted in NCT U when they came out with “The 7th Sense”, and since then, he’s been known as the K-Pop idol that has debuted in the most groups total: Not just NCT U, but NCT Dream, NCT 127, and, most recently, SuperM as well. Given how naturally talented and charismatic he is as a performer, it’s not surprising that he would be put into so many groups, but it’s amazing that he can keep up with all of them! </p>
+
+                <!-- inside of the aside tag is content that should stand alone with is related to the article-->
+                <aside>Mark along with his other 22 members continue to sweep the charts with their new songs and comebacks. </article>
+        </article>
+    </section>
+
+    <section>
+        <h2>Cool Fact</h2>
+        <article>
+            <h3>Types of Lists</h3>
+            <!-- un ordered lists meaning it wont have 1,2,3, a,b,c etc.-->
+            <ul id="uoListTypes">
+                <li>Unordered</li>
+                <li>Ordered</li>
+                <li>Definition</li>
+            </ul>
+
+            <ol id="oListTypes">
+                <li>Percy Jackson and the Olympians
+                <!-- indent; or a list inside of a list, make a li tag but dont close it off then start another ol tag-->
+                <ol id="oListIndent"
+                    <li>The Lightning Theif</li>
+                    <li>The Sea of Monsters</li>
+                    <li>The Titan's Curse</li>
+                    <li>The Battle of the Labyrinth</li>
+                    <li>The Last Olympian</li>
+
+                </ol>
+                </li>   
+                <li>The Trials of Apollo</li>
+                <!-- definition lists, the word is gna be in italics and the definition will be indented-->
+                
+                    <dl>
+                        <dt><dfn>Definition</dfn> </dt>
+                        <!-- dt and dfn is what we're defining and dd is the actual definition-->
+                        <dd> The act of making definite, dinstinct, or clear</dd>
+                    </dl>
+                    <aside>A list is a number of connected items or names written or printed consecutively, typically one below the other.</aside>
+
+        </article>
+
+    </section>
+
+    <section>
+
+        <h2>Fun Fact</h2>
+        <article>
+            <h3>Tables</h3>
+            <table id="tableData">
+
+                <caption>Baseball</caption>
+                <thead>
+                    <!-- tr defines how many rows u want in the table-->
+
+                    <tr>
+                        <!-- how many colums-->
+                        <td colspan ="4">Best Baseball Players</td>
+                     </tr>
+                </thead>
+                <tfoot>
+                    <tr><td colspan="4">* Hall of Fame</td></tr>
+                </tfoot>
+
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>Average</td>
+                        <td>RBI</td>
+                        <td>Homeruns</td>
+                    </tr>
+                    <tr>
+                        <td>Hank Arron*</td>
+                        <td>.305</td>
+                        <td>2297</td>
+                        <td>775</td>
+                    </tr>
+
+                    <tr>
+                        <td>Babe Ruth*</td>
+                        <td>.342</td>
+                        <td>2214</td>
+                        <td>714</td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+
+        </article>
+
+    </section>
+
+</main>
+
+<footer>
+<!-- normally used to contain a way for us to contact the user of the creator of the webpage; small is often used for copyright-->
+    <address>lykadence07@gmail.com</address>
+    <small>copyright 2021</small>
+</footer>
+
+<!-- now we get in forms -->
+<!-- the data that is passed will be emmbedded into the url we're using with the GET method-->
+    <form  method="GET" action='phpscript.php'>
+ 
+        Your Name: <input type"text" name="name" size"50" maxlength="50"><br>
+        Your Password: <input type="password" name="password"><br>
+        <!-- for them to enter in a ton of info-->
+        Your History: <br>
+        <textarea name="history rows="20" cols="50">Just random words</textarea>
+
+        <fieldset>
+            <legend>Hobbies</legend>
+            <!-- create a check box-->
+            Programming<input type="checkbox" name="cbprogramming" value="Programming">
+            Running<input type="checkbox" name="cbrunning" value="Running">
+        </fieldset>
+
+        <fieldset>
+            <!-- so unlike checkbox, with radio you can only choose one, by making the name equal-->
+            <legend>Top Skill</legend> 
+            Programming<input type="radio" name="skill" value="Programming" 
+            checked>
+            Running<input type="radio" name="skill" value="Running">
+
+        </fieldset>
+
+        <!-- if u want to give the users mutilple different options, or make like a select bar-->
+        Favorite Number:
+        <select name="favNum">
+            <option value="PI">Pi (3.14)</option>
+            <option value="my fav">16</option>
+            <option value="infinity">Infinity and beyond</option>
+        </select>
+        Favorite Hero:
+        <select name="favHero">
+            <optgroup label="Marvel">
+                <option value="spiderman">Spiderman</option>
+                <option value="ironman">Ironman</option>
+            </optgroup>
+            <optgroup label="DC">
+                <option value="flash">Flash</option>
+                <option value="greenarrow">Green Arrow</option>
+            </optgroup>
+
+        </select>
+            <!-- u can also submit hidden data-->
+        <input type="hidden" name="browser" id="browser">
+        <!-- u can also allow the user to upload files-->
+        <input type="file" name="upload"> 
+        <!-- u can also use an image to submit-->
+        <input type="image" alt="logo" src=""> 
+
+        <input type="submit" name="submit" value="Submit">
+        <input type="reset" value="Reset">
+
+    </form>
+
+    <canvas id="canvas" width="1000" height="600"></canvas>
+
+    <p id="notify"></p>
+
+    <input type="text" id="yourName" size="50">
+    <button onClick="setName"
+
+
+</div>
+</body>
+</html>
