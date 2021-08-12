@@ -14,7 +14,7 @@ function setup() {
 	// this sets the rectWidth of the rectangles when in rectangle mode
 	rectWidth = width / numLines;
 
-	// frameRate(5);
+	frameRate();
 }
 
 function draw() {
@@ -50,14 +50,14 @@ function draw() {
 		}
 	}
 
-	// the i index tells us what to compare to, and holds the smallest element
-	// the j index tells us where to start searching for the smallest element
-	if (i < lineHeight.length - 1) {
-		for (let j = i + 1; j < lineHeight.length; j++) {
-			if (lineHeight[j] < lineHeight[i]) {
-				swap(lineHeight, i, j);
-			}
+	if (i < lineHeight.length) {
+		let shifterIndex = i - 1;
+		let key = lineHeight[i];
+		while (shifterIndex >= 0 && key < lineHeight[shifterIndex]) {
+			lineHeight[shifterIndex + 1] = lineHeight[shifterIndex];
+			shifterIndex--;
 		}
+		lineHeight[shifterIndex + 1] = key;
 	} else {
 		noLoop();
 	}
@@ -68,4 +68,16 @@ function swap(array, index1, index2) {
 	let temp = array[index1];
 	array[index1] = array[index2];
 	array[index2] = temp;
+}
+
+function insertionSort() {
+	for (let i = 1; i < lineHeight.length; i++) {
+		let shifterIndex = i - 1;
+		let key = lineHeight[i];
+		while (shifterIndex >= 0 && key < lineHeight[shifterIndex]) {
+			lineHeight[shifterIndex + 1] = lineHeight[shifterIndex];
+			shifterIndex--;
+		}
+		lineHeight[shifterIndex + 1] = key;
+	}
 }
