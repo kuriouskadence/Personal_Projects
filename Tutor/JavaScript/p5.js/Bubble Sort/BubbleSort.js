@@ -1,35 +1,54 @@
 let lineHeight = [];
-let lineWidth = 0;
-let numLines = 0;
+let rectWidth = 0;
+let numLines = 100;
 let i = 0;
 
+// This gets called once and at the beginning of the program
 function setup() {
 	createCanvas(1000, 400);
-	numLines = 100;
+
+	// This plugs in the number of lines into the array
 	for (let i = 0; i < numLines; i++) {
 		lineHeight.push(int(random(0, height)));
 	}
-	lineWidth = width / numLines;
+	// This sets the rectWidth of the rectangles when in rectangle mode
+	rectWidth = width / numLines;
 }
 
 function draw() {
+	// This draws the background in RGB Mode
 	colorMode(RGB);
-	background(100, 200, 300);
+	background(0);
 
-	swap(lineHeight, Math.floor(random() * numLines), Math.floor(random() * numLines));
-
+	// This simply draws the rect/lines using the array as its height values
 	for (let i = 0; i < lineHeight.length; i++) {
+		// This maps the color fromm its height to its corresponding color
 		colorMode(HSB);
 		let lineColor = map(lineHeight[i], 0, height, 0, 360);
-		if (lineWidth > 1) {
+
+		// This says that if width > 1, then draw rectangle, else draw lines
+		if (rectWidth > 1) {
 			stroke(0);
 			fill(lineColor, 100, 100);
-			rect(i * lineWidth, height - lineHeight[i], lineWidth, lineHeight[i]);
+			rect(i * rectWidth, height - lineHeight[i], rectWidth, lineHeight[i]);
 		} else {
 			stroke(lineColor, 100, 100);
 			line(i, height, i, height - lineHeight[i]);
 		}
 	}
+
+	// The i index tells us what to compare to, and holds the smallest element
+	// The j index tells us where to start searching for the smallest element
+	if (i < lineHeight.length - 1) {
+		for (let j = i + 1; j < lineHeight.length; j++) {
+			if (lineHeight[j] < lineHeight[i]) {
+				swap(lineHeight, i, j);
+			}
+		}
+	} else {
+		noLoop();
+	}
+	i++;
 }
 
 function swap(array, index1, index2) {
