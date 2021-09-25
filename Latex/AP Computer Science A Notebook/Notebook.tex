@@ -1,0 +1,91 @@
+\documentclass[11pt]{article}
+\usepackage[margin = 1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{url}
+\usepackage[parfill]{parskip}
+\usepackage{listings}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{mdframed}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},  
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,        
+	breaklines=true,                
+	captionpos=b,                    
+	keepspaces=true,                
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+\lstset{style=mystyle}
+\newcommand{\skipline}{\vspace{\baselineskip}}
+\newcommand{\spacer}{\noalign{\medskip}}
+\newcommand{~}{\sim}
+\newcommand{\approches}{\rightarrow}
+\newcommand{\qarrow}{\quad \rightarrow \quad}
+\newcommand{\qqarrow}{\qquad \rightarrow \qquad}
+\newcommand{\qtext}[1]{\quad \text{ #1 } \quad}
+\newcommand{\qqtext}[1]{\qquad \text{ #1 } \qquad}
+\newcommand{\pard}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\answer}[1]{\textbf{\boldmath #1}}
+\newenvironment{problem}[1]{\textbf{Excersise #1: }}{\newpage}
+
+\begin{document}
+	
+	\begin{center}
+		\textbf{AP Computer Science A Notebook} \\
+		\textbf{Kadence Ly} \\
+		\skipline \skipline
+	\end{center}
+
+	\begin{enumerate}[]
+		\item \textbf{Primitive Types (Java)}
+			\begin{enumerate}
+				\item int - this can represent an integer, meaning a postive or negative number without decimals
+				\item byte - this represents the smallest type of integer
+				\item short - this represents the second smallest integer, bigger than a byte smaller than an int
+				\item long - this represents the biggest type of integer.
+				\item float - this represents a number with up to six or seven decimals, every number ends with the letter f 
+				\item double - this represents a number with up to fifteen decimals
+				\item boolean - this will hold a value called true(1)or false(0)
+				\item char - this represents a single character, uses a single quotation mark
+			\end{enumerate}
+		\item \textbf{Using Objects}
+			\begin{enumerate}
+				\item An object is something that contains attributes / characteristics 
+				\item An example of a well known object is an array. An array holds multiple values of the same data types in java 
+				\item Another well known oject is a String. A String is NOT a primitive data type. A String is an array of characters - a character is a primitive type while a String holds them. 
+				\item they aren't primitive types but they are objects
+				\item each object is different from each data type - each object has method and varibles 
+				\item\textbf{Example: Animal }
+					\begin{enumerate}
+						\item An animal has the following characteristics: name, haircolor, species, mother, sound, number of legs 
+						\item  A name is just a varible with type String. 
+						\item Haircolor is just a varible with type String
+						\item Mother is just a varible of type Animal
+					
+						
+					\end{enumerate}
+			\end{enumerate}
+	\end{enumerate}
+	
+\end{document}
+

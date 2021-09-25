@@ -1,0 +1,39 @@
+body {
+	margin: auto;
+	background-color: rgb(123, 161, 128);
+	width: 1000px;
+	/* border: 1px solid black; */
+}
+
+#title {
+	color: black;
+	font-family: 'Tahoma, Verdana, sans-serif';
+	text-decoration: none;
+}
+
+#horzNav {
+	display: block;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: beige;
+	border-radius: 25px;
+}
+
+#horzNav a {
+	color: black;
+	padding: 40px;
+	font-size: 13pt;
+}
+
+#welcome {
+	font-size: 16pt;
+	color: wheat;
+}
+
+#intro {
+	font-size: 13pt;
+}
+
+#contacts {
+	list-style-type: none;
+	color:rgb(65, 49, 65);
