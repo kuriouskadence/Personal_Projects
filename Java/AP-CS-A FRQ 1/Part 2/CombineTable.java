@@ -16,7 +16,7 @@ public class CombineTable {
             return false;
         }
         //  return totalSeats >= numSeats;
-    }s
+    }
     
     public double getDesirability() {
         double desirability = (t1.getViewQuality() + t2.getViewQuality()) /2 ; 
