@@ -1,9 +1,13 @@
 import java.util.Scanner;
 public class TAAG {
 
-    public static int calcAverage (int t1, int t2, int t3, int t4, int t5) {
-        int sum = t1 + t2 + t3 + t4 + t5;
-        int average = sum / 5;
+    public static double calcAverage (int[] testScores) {
+        int sum = 0;
+        for (int i = 0; i < testScores.length; i++) {
+            sum += testScores[i];
+        }
+        System.out.println("SUM " + sum);
+        double average = (double) sum / testScores.length;
         return average;
     }
 
@@ -31,22 +35,17 @@ public class TAAG {
 
     public static void main (String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.print("Enter test score 1: ");
-        int number1 = input.nextInt();
-        System.out.print("Enter test score 2: ");
-        int number2 = input.nextInt();
-        System.out.print("Enter test score 3: ");
-        int number3 = input.nextInt();
-        System.out.print("Enter test score 4: ");
-        int number4 = input.nextInt();
-        System.out.print("Enter test score 5: ");
-        int number5 = input.nextInt();
-        System.out.println("Test number 1: " + determineGrade(number1));
-        System.out.println("Test number 2: " + determineGrade(number2));
-        System.out.println("Test number 3: " + determineGrade(number3));
-        System.out.println("Test number 4: " + determineGrade(number4));
-        System.out.println("Test number 5: " +determineGrade(number5));
-        System.out.println("Test Average: " + calcAverage(number1, number2, number3, number4, number5));
+        int numTestScores = 5;
+        int[] testScores = new int[numTestScores];
+        for (int i = 0; i < numTestScores; i++) {
+            System.out.print("Enter test score " + (i + 1) + ": ");
+            testScores[i] = input.nextInt();
+        }
+        for (int i = 0; i < numTestScores; i++) {
+            System.out.println("Test number " + (i + 1) + ": " + determineGrade(testScores[i]));
+        }
+        double avg = calcAverage(testScores);
+        System.out.println("Test Average: " + avg + " - " + determineGrade((int) avg));
 
         input.close();
     }
