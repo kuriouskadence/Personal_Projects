@@ -1,5 +1,5 @@
+import java.util.Random;
 import java.util.Scanner;
-
 
 public class QSalesStats {
  
@@ -27,7 +27,23 @@ public class QSalesStats {
             System.out.println("Enter Quarterly Sales for Division " + (i + 1));
             for (int j = 0; j < numQ; j++) {
                 System.out.print("Enter in Quarter " + (j + 1) + " Sales: ");
-                qSales[j][i] = input.nextInt();
+                int givenInput = input.nextInt();
+                while (givenInput < 0) {
+                    System.out.print("Try Again! Enter in Quarter " + (j + 1) + " Sales: ");
+                    givenInput = input.nextInt();
+                }
+                qSales[j][i] = givenInput;
+            }
+        }
+        return qSales;
+    }
+
+    public static int[][] setQSalesRandom(int numDivisions, int numQ) {
+        Random rand = new Random();
+        int[][] qSales = new int[numQ][numDivisions];
+        for (int i = 0; i < qSales.length; i++) {
+            for (int j = 0; j < qSales[i].length; j++) {
+                qSales[i][j] = rand.nextInt(10000);
             }
         }
         return qSales;
@@ -120,10 +136,10 @@ public class QSalesStats {
     
 
     public static void main (String[] args) {
-        int numDivisions = 2;
+        int numDivisions = 6;
         int numQ = 4;
-        int[][] qSales = {{2, 6}, {7, 10}, {4, 3}, {11, 8} };
-        //int[][] qSales = getInput(numDivisions, numQ);
+        // int[][] qSales = setQSalesRandom(numDivisions, numQ);
+        int[][] qSales = getInput(numDivisions, numQ);
 
         System.out.println("\nQSALES ARRAY: ");
         print2DArray(qSales);
