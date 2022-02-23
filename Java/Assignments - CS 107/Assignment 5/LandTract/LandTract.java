@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 public class LandTract {
-    private static int length;
-    private static int width; 
+    private int length;
+    private int width; 
     public static Scanner input = new Scanner(System.in);
 
     public LandTract(int length, int width) {
@@ -14,7 +14,7 @@ public class LandTract {
         this.length = length;
     }
 
-    public int getLength(int length) {
+    public int getLength() {
         return length;
     }
 
@@ -22,25 +22,28 @@ public class LandTract {
         this.width = width;
     }
 
-    public int getWidth(int width) {
+    public int getWidth() {
         return width;
     }
 
-    public static int findArea(int length, int width) {
+    public int findArea() {
         return length * width;
     }
 
-    public static boolean equals(LandTract objectOne, LandTract objectTwo){
-        if(objectOne == objectTwo){
+    public boolean equals(LandTract objectTwo){
+        if(length == objectTwo.length && width == objectTwo.width){
             return true;
-        } else{
+        } else if(length == objectTwo.width && width == objectTwo.length) {
+            return true;
+        } else {
             return false;
         }
     }
+
    @Override
    public String toString(){
        String str = "";
-       str += "LandTract object with length " + length + " and width " + width;
+       str += "LandTract object with length " + this.length + " and width " + this.width;
        return str;
     }
 
@@ -61,16 +64,16 @@ public class LandTract {
      LandTract objectOne = new LandTract(obj1length, obj1width);
      LandTract objectTwo = new LandTract(obj2length, obj2width);
 
-    System.out.println(objectOne.findArea(obj1length, obj1width));
-    System.out.println(objectTwo.findArea(obj2length, obj2width));
+    System.out.println(objectOne.findArea());
+    System.out.println(objectTwo.findArea());
 
-    System.out.println(objectOne.toString());
-    System.out.println(objectTwo.toString());
+    System.out.println(objectOne);
+    System.out.println(objectTwo);
 
-    if(equals(objectOne, objectTwo) == true){
-        System.out.println("These two tracts have the same size.");
+    if(objectOne.equals(objectTwo)) {
+        System.out.println("The two tracts have the same size.");
     } else {
-        System.out.println("These two tracts do not have the same size.");
+        System.out.println("The two tracts do not have the same size.");
     }
        
    }
