@@ -1,6 +1,9 @@
 public class Senior extends Student {
     int numTimesEatOut;
 
+    public Senior() {
+        numTimesEatOut = 0;
+    }
     public Senior(int numTimesEatOut) {
         this.numTimesEatOut = numTimesEatOut;
     }
@@ -17,8 +20,8 @@ public class Senior extends Student {
         return "SIGHJHHHHDHHHHSSH";
     }
 
-    @Override
-    public String toString() {
-        return super.toString();
-    }
+    // @Override
+    // public String toString() {
+    //     String str = super.toString();
+    // }
 }

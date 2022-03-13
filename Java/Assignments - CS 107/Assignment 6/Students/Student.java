@@ -78,21 +78,18 @@ public class Student {
         for(int i = 0; i < grades.length; i++) {
             grade += getGradePoint(grades[i]);
         }
-
         return grade/grades.length;
     }
 
     public int getGradePoint(double grade) {
-        if(grade <= 100 && grade >= 90){
+        if (grade <= 100 && grade >= 90){
             return 4;
-        } else if(grade < 90 && grade >= 80){
+        } else if (grade < 90 && grade >= 80){
             return 3;
-        } else if(grade < 80 && grade >= 70){
+        } else if (grade < 80 && grade >= 70){
             return 2;
-        } else if(grade < 70 && grade >= 60){
+        } else if (grade < 70 && grade >= 60){
             return 1;
-        } else if (grade < 60 && grade >= 0){
-            return 0;
         } else {
             return 0;
         }
