@@ -16,9 +16,27 @@ public class TicTacToe {
         this.board = array;
     }
 
+    public char[][] getBoard() {
+        return board;
+    }
+
+    public boolean checkRow(int n, boolean isPlayerX) {
+        char player = 'X';
+        if(player != 'X') {
+            isPlayerX = false;
+        }
+        return isPlayerX;
+
+        for(int i = 0;)
+    }
+
+
+
+
+
     // public String toString(){
     //     String returnStr = "";
-    //     returnStr += "this is da board: " + print2DArr(board);
+    //     returnStr += ""
     //     return returnStr;
     // }
 
@@ -32,10 +50,16 @@ public class TicTacToe {
 
     public void print2DArr(char[][] array) {
         System.out.print("[ ");
-        for(int row = 0; i < array.length; i++) {
-            
+        for(char col = 0; col < array.length; col++) {
+            for(char row = 0; row < array[col].length - 1; row++){
+                System.out.print(array[col][row] + ", ");
+            }
+            System.out.println(array[col][array[col].length - 1]);
         }
         System.out.print("]");
+        
     }
+
+
     
 }
