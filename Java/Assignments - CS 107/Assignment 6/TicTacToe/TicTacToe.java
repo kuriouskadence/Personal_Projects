@@ -29,45 +29,46 @@ public class TicTacToe {
     public void playGame() {
         Scanner input = new Scanner(System.in);
         System.out.println(printInstructions());
+        System.out.println(toString());
         for(int i = 0; i < board.length; i++) {
-        System.out.println(toString());
-        // if(input != board.length) {
-        //     System.out.println("Try again!");
-        // }
-        System.out.print("Player 1 - enter in your row: ");
-        int row = input.nextInt();
-        System.out.print("Player 1 - enter in your column: ");
-        int col = input.nextInt();
-        if(board[row][col] == player1 || board[row][col] == player2 ) {
+            // if(input != board.length) {
+            //     System.out.println("Try again!");
+            // } have to figure out the input validation...
             System.out.print("Player 1 - enter in your row: ");
-            row = input.nextInt();
+            int row = input.nextInt();
             System.out.print("Player 1 - enter in your column: ");
-            col = input.nextInt();
-        } else {
-            board[row][col] = player1;
-        }
+            int col = input.nextInt();
+            if(board[row][col] == player1 || board[row][col] == player2 ) {
+                System.out.print("Player 1 - enter in your row: ");
+                row = input.nextInt();
+                System.out.print("Player 1 - enter in your column: ");
+                col = input.nextInt();
+            } else {
+                board[row][col] = player1;
+            }
 
-        System.out.println(toString());
-        if(checkRow(row, true) == true|| checkCol(col, true) == true || checkDiag(true) == true) {
-            System.out.print("Winner!");
-        } 
-        System.out.print("Player 2 - enter in your row: ");
-        int row2 = input.nextInt();
-        System.out.print("Player 2 - enter in your column: ");
-        int col2 = input.nextInt();
-        if(board[row2][col2] == player1 || board[row2][col2] == player2 ) {
+            System.out.println(toString());
+            if(checkRow(row, true) == true|| checkCol(col, true) == true || checkDiag(true) == true) {
+                System.out.print("Winner!");
+            } 
             System.out.print("Player 2 - enter in your row: ");
-            row2 = input.nextInt();
+            int row2 = input.nextInt();
             System.out.print("Player 2 - enter in your column: ");
-            col2 = input.nextInt();
-        } else {
-            board[row2][col2] = player2;
+            int col2 = input.nextInt();
+            if(board[row2][col2] == player1 || board[row2][col2] == player2 ) {
+                System.out.print("Player 2 - enter in your row: ");
+                row2 = input.nextInt();
+                System.out.print("Player 2 - enter in your column: ");
+                col2 = input.nextInt();
+            } else {
+                board[row2][col2] = player2;
+            }
+            System.out.println(toString());
+            if(checkRow(row2, true) == true|| checkCol(col2, true) == true || checkDiag(true) == true) {
+                System.out.println("Winner!");
+            } 
         }
-        System.out.println(toString());
-        if(checkRow(row2, true) == true|| checkCol(col2, true) == true || checkDiag(true) == true) {
-            System.out.println("Winner!");
-        } 
-        }
+        input.close();
         
     }
     
