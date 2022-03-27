@@ -85,13 +85,27 @@ public class IntArrayList{
         return arrayList.length;
     }
 
-    // public int getSum(int n) {
-        
-    // }
+    public int getSum(int n) {
+        int sum = 0;
+        if(arrayList[n] > 0) {
+            sum = arrayList[n] + getSum(arrayList[n] - 1);
+        } else {
+            return 0;
+        }
 
-    // public int getProduct(int n) {
+        return sum;
+    }
 
-    // }
+    public int getProduct(int n) {
+        int product = 0;
+        if(arrayList[n] > 0) {
+            product = arrayList[n] * getSum(arrayList[n] - 1);
+        } else {
+            return 0;
+        }
+
+        return product;
+    }
 
     @Override
     public String toString() {
