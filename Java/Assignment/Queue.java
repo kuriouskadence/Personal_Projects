@@ -1,6 +1,9 @@
 public class Queue extends IntArrayList{
     int[] array;
 
+    public Queue() {
+        super();
+    }
     public Queue(int[] array) {
         super(array);
     }

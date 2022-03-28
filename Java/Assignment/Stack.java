@@ -1,43 +1,32 @@
 public class Stack extends IntArrayList{
-    int[] array;
+
+    public Stack() {
+        super();
+    }
 
     public Stack(int[] array) {
        super(array);
     }
 
+    // OBVIOUSLY BREAK
+    // THIS TOO
     public int peek() {
-        return array[array.length];
+        return get(getSize() - 1);
     }
 
-    public int pop() {
-        int top = peek();
-        int[] copyArray = new int[array.length - 1];
-        for(int i = 0; i < array.length; i++) {
-            if(i != top) {
-                copyArray[i] = array[i];
-            }
-        }
-        array = copyArray;
-        return top;
+    // YOU CAN USE THE INTARRAYLIST METHODS
+    // public int pop() {
+       
+    // }
+
+    // weird
+    // use methods from super
+    public int[] push(int elem) {
+        int[] copyArray = new int[getSize() + 1];
+            
+        copyArray[copyArray.length - 1] = elem;
+
+        return copyArray;
     }
-
-    public int[] push(int n) {
-        int[] copyArray = new int[array.length + 1];
-        for(int i = 0; i < array.length; i++) {
-            copyArray[i] = array[i + 1];
-        }
-
-        copyArray[array.length] = n;
-        
-        array = copyArray;
-        return array;
-
-
-    }
-
-
-
-
-
 
 }
