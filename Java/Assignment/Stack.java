@@ -21,12 +21,8 @@ public class Stack extends IntArrayList{
 
     // weird
     // use methods from super
-    public int[] push(int elem) {
-        int[] copyArray = new int[getSize() + 1];
-            
-        copyArray[copyArray.length - 1] = elem;
-
-        return copyArray;
+    public void push(int elem) {
+        add(elem);
     }
 
 }

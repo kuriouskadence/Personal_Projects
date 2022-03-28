@@ -71,13 +71,13 @@ public class Application {
         // System.out.println(newArrayList.getProduct(2));
         // System.out.println();
 
-        System.out.println("test");
+        System.out.println("Test: Peek");
         System.out.println(stk.peek());
         System.out.println(stk);
         System.out.println();
 
-        System.out.println("testss");
-        System.out.println(stk.push(2));
+        System.out.println("Test: Push");
+        stk.push(2);
         System.out.println(stk);
         System.out.println();
 
