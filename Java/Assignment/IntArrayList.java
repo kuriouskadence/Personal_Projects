@@ -102,6 +102,11 @@ public class IntArrayList{
     // CHECK THE PARAMETER
     public int getProduct(int elem) {
         int product = 0;
+        if(arrayList[elem] > 0) {
+            product = arrayList[elem] * getSum(arrayList[elem] - 1);
+        } else {
+            return 0;
+        }
         
 
         return product;

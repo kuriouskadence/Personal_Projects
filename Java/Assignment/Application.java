@@ -63,13 +63,13 @@ public class Application {
         // System.out.println(newArrayList.getSize());
         // System.out.println();
 
-        // System.out.println("Test 11: Get Sum");
-        // System.out.println(newArrayList.getSum(2));
-        // System.out.println();
+        System.out.println("Test 11: Get Sum");
+        System.out.println(newArrayList.getSum(2));
+        System.out.println();
 
-        // System.out.println("Test 12: Get Product");
-        // System.out.println(newArrayList.getProduct(2));
-        // System.out.println();
+        System.out.println("Test 12: Get Product");
+        System.out.println(newArrayList.getProduct(2));
+        System.out.println();
 
         System.out.println("Test: Peek");
         System.out.println(stk.peek());
