@@ -35,11 +35,14 @@ public class IntArrayList{
     // BAD
     public int[] remove(int elem) {
         int[] copyArray = new int[arrayList.length - 1];
-        for(int i = 0; i < arrayList.length; i++) {
-            if(arrayList[i] == elem) {
-                copyArray[i] = arrayList[i];
-            }
+        for (int i = 0; i < arrayList.length; i++) {
+            for(int j = 0; j < arrayList.length; j++)
+            if (i != elem) {
+            copyArray[j++] = arrayList[i];
+         }
+
         }
+
         return copyArray;
     }
 
@@ -103,11 +106,10 @@ public class IntArrayList{
     public int getProduct(int elem) {
         int product = 0;
         if(arrayList[elem] > 0) {
-            product = arrayList[elem] * getSum(arrayList[elem] - 1);
+            product = arrayList[elem] * getProduct(arrayList[elem] - 1);
         } else {
             return 0;
         }
-        
 
         return product;
     }
